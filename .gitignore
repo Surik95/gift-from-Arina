@@ -1,3 +1,2 @@
-/PUG
-*.html
-!index.html
+PUG/
+Compiled-HTML/
