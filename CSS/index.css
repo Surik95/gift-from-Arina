@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+  }
+
+.mistake:nth-child(odd) {
+    background-color: #b5b8b1;
+}
+
+.mistake:nth-child(even) {
+    background-color: #e9b4da;
+}
