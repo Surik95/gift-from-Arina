@@ -1,14 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    padding-bottom: 15px;
   }
 
-.mistake:nth-child(odd) {
-    background-color: #b5b8b1;
+html {
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+.mistake{
+    
+    flex: 1 0 300px;
+    text-align: center;
+    padding: 30px;
+    border: #e9b4da solid 2px;
+    margin: 5px;
 }
 
-.mistake:nth-child(even) {
+.mistatakes-wraper {
+    display: flex;
+    overflow: scroll;
+    background-color: #b5b8b1;
+    align-items: center;
+}
+
+.header {
+    background-color: #b5b8b1;
+    padding: 20px 0 50px 50px;
+}
+
+.partfolio {
     background-color: #e9b4da;
+    padding: 10px;
+}
+
+.greeting {
+    font-size: 1.4rem;
+    line-height: 2;
+}
+
+.greeting-text {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.purposes {
+    margin-left: 100px;
+    margin-bottom: 50px;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+
+.partfolio-images {
+    max-width: 60%;
+    display: flex;   
+    margin: 0 auto 30px;
+}
+
+.partfolio-images img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-top-left-radius: 45%;
+    border-top-right-radius: 45%;
+    padding: 5px;
+    border: 1px solid #b5b8b1;
+}
+
+.tasks-content {
+    background-color: #b5b8b1;
+    padding: 15px;
+    border: #e9b4da solid 1px;
+}
+
+.mistakes_content h3 {
+    background-color: #e9b4da;
+    padding: 15px;
+    text-align: center;
 }
