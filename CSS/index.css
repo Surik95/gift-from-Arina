@@ -62,10 +62,7 @@ html {
 }
 
 .partfolio-images img {
-    max-width: 100%;
-    align-items: center;
-    align-self: center;
-        
+    max-width: 100%;  
     border-top-left-radius: 45%;
     border-top-right-radius: 45%;
     padding: 5px;
