@@ -6,6 +6,10 @@
     box-sizing: border-box;
   }
 
+body {
+    background-color: #b5b8b1;
+}
+
 html {
     font-size: 100%;
     font-family: 'Montserrat', sans-serif;
@@ -33,9 +37,18 @@ html {
 
 .header {
     background-color: #b5b8b1;
-    padding: 20px 0 50px 50px;
+    padding: 20px 20px; 
 }
 
+
+.link_instagram {
+    text-decoration-line: none;
+    color: black;
+}
+
+.link_instagram:hover {
+    color: #e9b4da
+}
 .partfolio {
     background-color: #e9b4da;
     padding: 10px;
@@ -101,4 +114,45 @@ html {
     background-color: #e9b4da;
     padding: 15px;
     text-align: center;
+}
+
+
+.items {
+    display: flex;
+    width: 100%;
+    background-color: #b5b8b1;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.social-icon__instagram {
+    background-image: url(../Image/icon/Instagram_white.svg);
+}
+
+.social-icon-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-item {
+    list-style: none;
+    margin-right: 25px;
+}
+
+.social-icon__vk {
+    background-image: url(../Image/icon/VK_white.svg);
+}
+.social-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.visually-hidden-icon {
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
 }
