@@ -26,6 +26,11 @@ html {
     align-items: center;
 }
 
+.mistatakes-wraper::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 .header {
     background-color: #b5b8b1;
     padding: 20px 0 50px 50px;
@@ -50,19 +55,32 @@ html {
     margin-left: 100px;
     margin-bottom: 50px;
     font-size: 1rem;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 
 .partfolio-images {
-    max-width: 60%;
+    width: 60%;
     display: flex;   
     margin: 0 auto 30px;
     object-fit: cover;
 }
 
+.total-container {
+    background-color: #e9b4da;
+    padding: 10px;
+    line-height: 1.2;
+}
+
+.total-item {
+    margin-left: 15px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+
 .partfolio-images img {
-    max-width: 100%;  
+    width: 100%;  
     border-top-left-radius: 45%;
     border-top-right-radius: 45%;
     padding: 5px;
