@@ -64,6 +64,8 @@ html {
     display: flex;   
     margin: 0 auto 30px;
     object-fit: cover;
+    justify-content: center;
+    align-items: center;
 }
 
 .total-container {
@@ -85,6 +87,8 @@ html {
     border-top-right-radius: 45%;
     padding: 5px;
     border: 1px solid #b5b8b1;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .tasks-content {
