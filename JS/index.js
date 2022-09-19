@@ -19,36 +19,40 @@ class ScrolSlider {
     }
     let start = 0;
     let finish = 0;
+    let timeout;
 
     this.wraper.addEventListener('touchstart', (e) => {
+      clearTimeout(timeout);
       start = e.changedTouches[0].clientX;
     });
 
     this.wraper.addEventListener('touchend', (e) => {
-      finish = e.changedTouches[0].clientX;
-      if (start > finish) {
-        this.wraper.scrollLeft =
-          Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
-            this.wraper.clientWidth +
-          this.wraper.clientWidth;
-      } else if (start < finish) {
-        this.wraper.scrollLeft =
-          Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
-            this.wraper.clientWidth -
-          this.wraper.clientWidth;
-      } else {
-        if (finish > this.wraper.clientWidth / 2) {
+      timeout = setTimeout(() => {
+        finish = e.changedTouches[0].clientX;
+        if (start > finish) {
           this.wraper.scrollLeft =
             Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
               this.wraper.clientWidth +
             this.wraper.clientWidth;
-        } else if (finish < this.wraper.clientWidth / 2) {
+        } else if (start < finish) {
           this.wraper.scrollLeft =
             Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
               this.wraper.clientWidth -
             this.wraper.clientWidth;
+        } else {
+          if (finish > this.wraper.clientWidth / 2) {
+            this.wraper.scrollLeft =
+              Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
+                this.wraper.clientWidth +
+              this.wraper.clientWidth;
+          } else if (finish < this.wraper.clientWidth / 2) {
+            this.wraper.scrollLeft =
+              Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
+                this.wraper.clientWidth -
+              this.wraper.clientWidth;
+          }
         }
-      }
+      }, 1000);
     });
   }
 
