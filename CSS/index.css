@@ -172,6 +172,14 @@ background-color: #e9b4da;
 .social-icon__vk {
     background-image: url(../Image/icon/VK_white.svg);
 }
+.social-icon__whatsapp {
+    background-image: url(../Image/icon/WhatsApp_white.svg)
+}
+
+.social-icon__telegram {
+    background-image: url(../Image/icon/Telegram_white.svg)
+}
+
 .social-icon {
     display: block;
     width: 30px;
