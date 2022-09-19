@@ -17,6 +17,9 @@ class ScrolSlider {
       indicator.dataset.indicator = i;
       this.element.append(indicator);
     }
+    [...document.querySelectorAll('.mistake_indicator')][0].classList.add(
+      'mistake_indicator_active'
+    );
     let start = 0;
     let finish = 0;
 
@@ -49,6 +52,13 @@ class ScrolSlider {
             this.wraper.clientWidth;
         }
       }
+      document
+        .querySelectorAll('.mistake_indicator')
+        .forEach((elem) => elem.classList.remove('mistake_indicator_active'));
+      let arr = [...document.querySelectorAll('.mistake_indicator')];
+      arr[this.wraper.scrollLeft / this.wraper.clientWidth].classList.add(
+        'mistake_indicator_active'
+      );
     });
   }
 

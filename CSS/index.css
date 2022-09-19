@@ -60,6 +60,10 @@ html {
     border-radius: 50%;
 }
 
+.mistake_indicator_active {
+background-color: #e9b4da;
+}
+
 .header {
     background-color: #b5b8b1;
     padding: 20px 20px; 
