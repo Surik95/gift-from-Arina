@@ -30,26 +30,48 @@ class ScrolSlider {
     this.wraper.addEventListener('touchend', (e) => {
       finish = e.changedTouches[0].clientX;
       if (start > finish) {
-        this.wraper.scrollLeft =
-          Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
-            this.wraper.clientWidth +
-          this.wraper.clientWidth;
-      } else if (start < finish) {
-        this.wraper.scrollLeft =
-          Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
-            this.wraper.clientWidth -
-          this.wraper.clientWidth;
-      } else {
-        if (finish > this.wraper.clientWidth / 2) {
+        if (
+          this.slides.length - 1 ===
+          Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth)
+        ) {
+          this.wraper.scrollLeft = 0;
+        } else {
           this.wraper.scrollLeft =
             Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
               this.wraper.clientWidth +
             this.wraper.clientWidth;
-        } else if (finish < this.wraper.clientWidth / 2) {
+        }
+      } else if (start < finish) {
+        if (this.wraper.scrollLeft === 0) {
+          this.wraper.scrollLeft = this.wraper.scrollWidth;
+        } else {
           this.wraper.scrollLeft =
             Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
               this.wraper.clientWidth -
             this.wraper.clientWidth;
+        }
+      } else {
+        if (finish > this.wraper.clientWidth / 2) {
+          if (
+            this.slides.length - 1 ===
+            Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth)
+          ) {
+            this.wraper.scrollLeft = 0;
+          } else {
+            this.wraper.scrollLeft =
+              Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
+                this.wraper.clientWidth +
+              this.wraper.clientWidth;
+          }
+        } else if (finish < this.wraper.clientWidth / 2) {
+          if (this.wraper.scrollLeft === 0) {
+            this.wraper.scrollLeft = this.wraper.scrollWidth;
+          } else {
+            this.wraper.scrollLeft =
+              Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
+                this.wraper.clientWidth -
+              this.wraper.clientWidth;
+          }
         }
       }
       document
