@@ -35,7 +35,7 @@ html {
 
 .mistatakes-wraper {
     display: flex;
-    overflow: scroll;
+    overflow: hidden;
     background-color: #b5b8b1;
     align-items: center;
 }
