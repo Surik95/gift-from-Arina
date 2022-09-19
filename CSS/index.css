@@ -14,13 +14,23 @@ html {
     font-size: 100%;
     font-family: 'Montserrat', sans-serif;
 }
+
+.mistakes_content {
+    line-height: 1.2
+
+}
+
 .mistake{
-    
-    flex: 1 0 300px;
+    flex: 1 0 calc(100% - 10px);
+    height: 100%;
     text-align: center;
-    padding: 30px;
+    padding: 15px;
     border: #e9b4da solid 2px;
     margin: 5px;
+}
+
+.mistake h4 {
+    margin-bottom: 10px;
 }
 
 .mistatakes-wraper {
@@ -33,6 +43,21 @@ html {
 .mistatakes-wraper::-webkit-scrollbar {
     width: 0;
     height: 0;
+}
+
+.mistake_index {
+    padding: 15px 5px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.mistake_indicator {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    border: #e9b4da solid 3px;
+    border-radius: 50%;
 }
 
 .header {
@@ -55,8 +80,9 @@ html {
 }
 
 .greeting {
-    font-size: 1.4rem;
-    line-height: 2;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
 }
 
 .greeting-text {
