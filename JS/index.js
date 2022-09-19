@@ -32,12 +32,12 @@ class ScrolSlider {
       if (start > finish) {
         if (
           this.slides.length - 1 ===
-          Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth)
+          Math.round(this.wraper.scrollLeft / this.wraper.clientWidth)
         ) {
           this.wraper.scrollLeft = 0;
         } else {
           this.wraper.scrollLeft =
-            Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
+            Math.round(this.wraper.scrollLeft / this.wraper.clientWidth) *
               this.wraper.clientWidth +
             this.wraper.clientWidth;
         }
@@ -46,7 +46,7 @@ class ScrolSlider {
           this.wraper.scrollLeft = this.wraper.scrollWidth;
         } else {
           this.wraper.scrollLeft =
-            Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
+            Math.round(this.wraper.scrollLeft / this.wraper.clientWidth) *
               this.wraper.clientWidth -
             this.wraper.clientWidth;
         }
@@ -54,12 +54,12 @@ class ScrolSlider {
         if (finish > this.wraper.clientWidth / 2) {
           if (
             this.slides.length - 1 ===
-            Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth)
+            Math.round(this.wraper.scrollLeft / this.wraper.clientWidth)
           ) {
             this.wraper.scrollLeft = 0;
           } else {
             this.wraper.scrollLeft =
-              Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
+              Math.round(this.wraper.scrollLeft / this.wraper.clientWidth) *
                 this.wraper.clientWidth +
               this.wraper.clientWidth;
           }
@@ -68,7 +68,7 @@ class ScrolSlider {
             this.wraper.scrollLeft = this.wraper.scrollWidth;
           } else {
             this.wraper.scrollLeft =
-              Math.floor(this.wraper.scrollLeft / this.wraper.clientWidth) *
+              Math.round(this.wraper.scrollLeft / this.wraper.clientWidth) *
                 this.wraper.clientWidth -
               this.wraper.clientWidth;
           }
@@ -78,9 +78,9 @@ class ScrolSlider {
         .querySelectorAll('.mistake_indicator')
         .forEach((elem) => elem.classList.remove('mistake_indicator_active'));
       let arr = [...document.querySelectorAll('.mistake_indicator')];
-      arr[this.wraper.scrollLeft / this.wraper.clientWidth].classList.add(
-        'mistake_indicator_active'
-      );
+      arr[
+        Math.round(this.wraper.scrollLeft / this.wraper.clientWidth)
+      ].classList.add('mistake_indicator_active');
     });
   }
 
