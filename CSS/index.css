@@ -206,7 +206,7 @@ background-color: #e9b4da;
     font-size: 5rem;
     transform: translate(0,70px) rotate(-25deg);
     margin-top: auto;
-    margin-left: 100px
+    margin-left: 10%;
 }
 
 .total-item::before {
