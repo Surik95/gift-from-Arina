@@ -12,10 +12,11 @@ class ScrolSlider {
 
   registerEvents() {
     for (let i = 0; i < this.slides.length; i++) {
+      let mistakeIndex = document.querySelector('.mistake_index_wraper');
       let indicator = document.createElement('div');
       indicator.classList.add('mistake_indicator');
       indicator.dataset.indicator = i;
-      this.element.append(indicator);
+      mistakeIndex.append(indicator);
     }
     [...document.querySelectorAll('.mistake_indicator')][0].classList.add(
       'mistake_indicator_active'

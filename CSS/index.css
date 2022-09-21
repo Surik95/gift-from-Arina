@@ -51,9 +51,12 @@ html {
 
 .mistake_index {
     padding: 15px 5px;
+}
+
+.mistake_index_wraper {
+    background-color: #b5b8b1;
     display: flex;
     justify-content: center;
-
 }
 
 .mistake_indicator {
