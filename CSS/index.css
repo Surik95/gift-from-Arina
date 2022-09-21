@@ -44,6 +44,10 @@ html {
     align-items: center;
 }
 
+.mistake-text {
+    font-weight: 400;
+}
+
 .mistatakes-wraper::-webkit-scrollbar {
     width: 0;
     height: 0;
